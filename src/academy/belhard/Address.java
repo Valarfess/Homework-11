@@ -45,7 +45,7 @@ public class Address {
         return houseNumber;
     }
 
-    public void setHouse_number(int houseNumber) {
+    public void setHouseNumber(int houseNumber) {
         this.houseNumber = houseNumber;
     }
 

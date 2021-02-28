@@ -9,7 +9,7 @@ public class AddressConnector {
     private static final String SELECT_ALL = "SELECT * FROM addresses";
     private static final String ADD = "INSERT INTO addresses (id, city, street, house_number, house_part, apartment_number) VALUES(?, ?, ?, ?, ?, ?)";
     private static final String DELETE = "DELETE FROM addresses where id = ?";
-    private static final String UPDATE = "UPDATE address SET id = ?, city = ?, street = ?, house_number = ?, house_part = ?, apartment_number = ? WHERE id = ?";
+    private static final String UPDATE = "UPDATE address SET city = ?, street = ?, house_number = ?, house_part = ?, apartment_number = ? WHERE id = ?";
 
 
     public static void add (Address address) {
@@ -63,24 +63,39 @@ public class AddressConnector {
 
         try (PreparedStatement statement = connection.prepareStatement(DELETE)) {
             connection.createStatement();
-
+        if (id == 1) {
             statement.executeUpdate("DELETE FROM addresses where id = 1");
+        } else if (id == 2) {
             statement.executeUpdate("DELETE FROM addresses where id = 2");
+        } else if (id == 3) {
+            statement.executeUpdate("DELETE FROM addresses where id = 3");
+        }
+        else if (id == 4) {
+            statement.executeUpdate("DELETE FROM addresses where id = 4");
+        }
+        else if (id == 5) {
+            statement.executeUpdate("DELETE FROM addresses where id = 5");
+        }
 
         } catch(Exception ex){
             System.out.println();
-
         }
-
     }
     public static void update (Address address){
         Connection connection = DbConnectionProvider.getConnection();
 
+
         try (PreparedStatement statement = connection.prepareStatement(UPDATE)) {
             connection.createStatement();
 
-            statement.executeUpdate("UPDATE address SET city = 'Polotsk', street = 'Kosmonavtov', house_number = 15 WHERE id = 3");
-            statement.executeUpdate("UPDATE address SET street = 'Belovezskaya', house_number = 2, house_part = 1, apartment_number = 39 WHERE id = 4");
+            statement.setString(1, "Brest");
+            statement.setString(2, "Zmagarou");
+            statement.setInt(3, 30);
+            statement.setInt(4, 5);
+            statement.setInt(5, 16);
+            statement.setInt(6, 1);
+
+            statement.executeUpdate(UPDATE);
     }
 
          catch(Exception ex){
