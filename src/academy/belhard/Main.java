@@ -21,13 +21,13 @@ public class Main {
         AddressConnector.readAll();
         System.out.println(AddressConnector.readAll());
 
-//        AddressConnector.update(address1);
-//        AddressConnector.update(address2);
-//        System.out.println(AddressConnector.readAll());
-
-        AddressConnector.delete(3);
-        AddressConnector.delete(4);
+        AddressConnector.update(address3);
+        AddressConnector.update(address4);
         System.out.println(AddressConnector.readAll());
+
+//        AddressConnector.delete(1);
+//        AddressConnector.delete(2);
+//        System.out.println(AddressConnector.readAll());
 
     }
 }

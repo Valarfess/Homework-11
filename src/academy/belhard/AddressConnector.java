@@ -64,12 +64,12 @@ public class AddressConnector {
         try (PreparedStatement statement = connection.prepareStatement(DELETE)) {
             connection.createStatement();
 
-            statement.executeUpdate(DELETE);
+            statement.executeUpdate("DELETE FROM addresses where id = 1");
+            statement.executeUpdate("DELETE FROM addresses where id = 2");
 
         } catch(Exception ex){
-            System.out.println("No connection...");
+            System.out.println();
 
-            System.out.println(ex);
         }
 
     }
@@ -79,12 +79,12 @@ public class AddressConnector {
         try (PreparedStatement statement = connection.prepareStatement(UPDATE)) {
             connection.createStatement();
 
-            statement.executeUpdate(UPDATE);
+            statement.executeUpdate("UPDATE address SET city = 'Polotsk', street = 'Kosmonavtov', house_number = 15 WHERE id = 3");
+            statement.executeUpdate("UPDATE address SET street = 'Belovezskaya', house_number = 2, house_part = 1, apartment_number = 39 WHERE id = 4");
     }
 
          catch(Exception ex){
-            System.out.println("No connection...");
-            System.out.println(ex);
+            System.out.println();
         }
 
     }
