@@ -1,5 +1,7 @@
 package academy.belhard;
 
+import java.sql.Statement;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -10,24 +12,22 @@ public class Main {
         Address address4 = new Address(4,"Zaslavl","Odoevskogo",16,5,99);
         Address address5 = new Address(5,"Grodno","Belskogo",40,3,25);
 
-        AddressConnector.add(address1);
-        AddressConnector.add(address2);
-        AddressConnector.add(address3);
-        AddressConnector.add(address4);
-        AddressConnector.add(address5);
-
+//        AddressConnector.add(address1);
+//        AddressConnector.add(address2);
+//        AddressConnector.add(address3);
+//        AddressConnector.add(address4);
+//        AddressConnector.add(address5);
 
         AddressConnector.readAll();
+        System.out.println(AddressConnector.readAll());
 
-//        System.out.println();
-//
-//        AddressConnector.delete(3);
-//
-//        System.out.println();
-//
 //        AddressConnector.update(address1);
+//        AddressConnector.update(address2);
+//        System.out.println(AddressConnector.readAll());
 
+        AddressConnector.delete(3);
+        AddressConnector.delete(4);
+        System.out.println(AddressConnector.readAll());
 
-	// write your code here
     }
 }

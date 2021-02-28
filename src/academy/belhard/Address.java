@@ -67,14 +67,13 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Address{" +
-                "id=" + id +
-                ", city='" + city + '\'' +
-                ", street='" + street + '\'' +
-                ", house_number=" + houseNumber +
-                ", house_part=" + housePart +
-                ", apartment_number=" + apartmentNumber +
-                '}';
+        return  "Address: " +
+                "id-" + id +
+                ", city-" + city +
+                ", street-" + street +
+                ", house_number-" + houseNumber +
+                ", house_part-" + housePart +
+                ", apartment_number-" + apartmentNumber + "\n";
     }
     public static Address createFoSaving (String city, String street, int houseNumber, int housePart, int apartmentNumber) {
         return new Address(-1, city, street, houseNumber, housePart, apartmentNumber);
