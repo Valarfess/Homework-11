@@ -5,10 +5,10 @@ public class Address {
     private String city;
     private String street;
     private int houseNumber;
-    private String housePart;
-    private String apartmentNumber;
+    private Integer housePart;
+    private Integer apartmentNumber;
 
-    public Address( int id, String city, String street, int houseNumber, String housePart, String apartmentNumber) {
+    public Address( int id, String city, String street, int houseNumber, Integer housePart, Integer apartmentNumber) {
         this.id = id;
         this.city = city;
         this.street = street;
@@ -49,19 +49,19 @@ public class Address {
         this.houseNumber = houseNumber;
     }
 
-    public String getHousePart() {
+    public Integer getHousePart() {
         return housePart;
     }
 
-    public void setHousePart(String housePart) {
+    public void setHousePart(Integer housePart) {
         this.housePart = housePart;
     }
 
-    public String getApartmentNumber() {
+    public Integer getApartmentNumber() {
         return apartmentNumber;
     }
 
-    public void setApartmentNumber(String apartmentNumber) {
+    public void setApartmentNumber(Integer apartmentNumber) {
         this.apartmentNumber = apartmentNumber;
     }
 
@@ -75,7 +75,7 @@ public class Address {
                 ", house_part-" + housePart +
                 ", apartment_number-" + apartmentNumber + "\n";
     }
-    public static Address createFoSaving (String city, String street, int houseNumber, String housePart, String apartmentNumber) {
+    public static Address createFoSaving (String city, String street, int houseNumber, Integer housePart, Integer apartmentNumber) {
         return new Address(-1, city, street, houseNumber, housePart, apartmentNumber);
     }
 }

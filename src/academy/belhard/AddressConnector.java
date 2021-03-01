@@ -21,8 +21,8 @@ public class AddressConnector {
             statement.setString(2, address.getCity());
             statement.setString(3, address.getStreet());
             statement.setInt(4, address.getHouseNumber());
-            statement.setString(5, address.getHousePart());
-            statement.setString(6, address.getApartmentNumber());
+            statement.setInt(5, address.getHousePart());
+            statement.setInt(6, address.getApartmentNumber());
 
             statement.executeUpdate();
 
@@ -71,8 +71,8 @@ public class AddressConnector {
             statement.setString(1, address.getCity());
             statement.setString(2, address.getStreet());
             statement.setInt(3, address.getHouseNumber());
-            statement.setString(4, address.getHousePart());
-            statement.setString(5, address.getApartmentNumber());
+            statement.setInt(4, address.getHousePart());
+            statement.setInt(5, address.getApartmentNumber());
             statement.setInt(6, id);
 
             statement.executeUpdate();
