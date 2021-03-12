@@ -24,10 +24,12 @@ public class Main {
 
         AddressConnector.update(Address.createFoSaving("NewYork", "Lomonosova", 11, 2,101), 3);
         AddressConnector.update(Address.createFoSaving("Moskov", "Kenedy",55, 4, 98),4);
+
         System.out.println(AddressConnector.readAll());
 
         AddressConnector.delete(1);
         AddressConnector.delete(5);
+
         System.out.println(AddressConnector.readAll());
 
     }
